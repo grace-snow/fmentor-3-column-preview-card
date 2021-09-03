@@ -10,11 +10,11 @@
   --accent-1: hsl(31, 77%, 52%);
   --accent-2: hsl(184, 100%, 22%);
   --accent-3: hsl(179, 100%, 13%);
-  --white: hsla(0, 0%, 100%, 0.75);
   --black: hsl(0, 0%, 0%);
+  --font-body: 'Lexend Deca', helvetica, sans-serif;
+  --font-heading: 'Big Shoulders Display', 'Lexend Deca', helvetica, sans-serif;
   --neutral: hsl(0, 0%, 95%);
-  --font-body: "Lexend Deca", helvetica, sans-serif;
-  --font-heading: "Big Shoulders Display", "Lexend Deca", helvetica, sans-serif;
+  --white: hsla(0, 0%, 100%, 0.75);
 }
 
 /*---------------------------
@@ -27,12 +27,16 @@
   align-items: center;
 }
 
+.flex-col {
+  flex-direction: column;
+}
+
 .sr-only {
   position: absolute;
   top: auto;
+  height: 1px;
+  width: 1px;
   overflow: hidden;
   clip: rect(1px, 1px, 1px, 1px);
-  width: 1px;
-  height: 1px;
   white-space: nowrap;
 }

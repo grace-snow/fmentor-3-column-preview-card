@@ -2,6 +2,9 @@
  ** Base
 -----------------------------*/
 body {
+  @extend .flex-center-all;
+  @extend .flex-col;
+  background: var(--neutral);
   font-family: var(--font-body);
   font-size: rem(15px);
 }

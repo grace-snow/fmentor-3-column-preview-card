@@ -86,17 +86,17 @@ select {
   --accent-1: hsl(31, 77%, 52%);
   --accent-2: hsl(184, 100%, 22%);
   --accent-3: hsl(179, 100%, 13%);
-  --white: hsla(0, 0%, 100%, 0.75);
   --black: hsl(0, 0%, 0%);
+  --font-body: 'Lexend Deca', helvetica, sans-serif;
+  --font-heading: 'Big Shoulders Display', 'Lexend Deca', helvetica, sans-serif;
   --neutral: hsl(0, 0%, 95%);
-  --font-body: "Lexend Deca", helvetica, sans-serif;
-  --font-heading: "Big Shoulders Display", "Lexend Deca", helvetica, sans-serif;
+  --white: hsla(0, 0%, 100%, 0.75);
 }
 
 /*---------------------------
  ** Helpers
 -----------------------------*/
-.flex-center-all {
+.flex-center-all, body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -108,13 +108,20 @@ select {
           align-items: center;
 }
 
+.flex-col, body {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .sr-only {
   position: absolute;
   top: auto;
+  height: 1px;
+  width: 1px;
   overflow: hidden;
   clip: rect(1px, 1px, 1px, 1px);
-  width: 1px;
-  height: 1px;
   white-space: nowrap;
 }
 
@@ -122,6 +129,7 @@ select {
  ** Base
 -----------------------------*/
 body {
+  background: var(--neutral);
   font-family: var(--font-body);
   font-size: 0.9375rem;
 }
@@ -166,7 +174,7 @@ footer a:focus-visible {
   max-width: 20rem;
   min-height: 26.25rem;
   overflow: hidden;
-  border-radius: 0.9rem;
+  border-radius: 0.5rem;
   color: var(--white);
 }
 
@@ -176,7 +184,7 @@ footer a:focus-visible {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    max-width: 50rem;
+    max-width: 53.75rem;
   }
 }
 
@@ -191,7 +199,7 @@ footer a:focus-visible {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  padding: 2rem;
+  padding: 2.375rem;
   background-color: var(--accent-1);
 }
 
@@ -204,20 +212,22 @@ footer a:focus-visible {
 }
 
 .c-showcase__card-title {
-  margin-top: 1rem;
+  margin-top: 1.25rem;
   color: var(--neutral);
   font-family: var(--font-heading);
-  font-size: 2.25rem;
+  font-size: 2.375rem;
   text-transform: uppercase;
 }
 
 .c-showcase__card-text {
-  margin-top: 1rem;
+  margin-top: 1.25rem;
   margin-bottom: auto;
+  opacity: 0.9;
+  line-height: 1.7;
 }
 
 .c-showcase__card-img {
-  height: 3.125rem;
+  height: 2.25rem;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -230,6 +240,7 @@ footer a:focus-visible {
   border: 0.125rem solid transparent;
   border-radius: 2.75rem;
   color: var(--black);
+  text-align: center;
   text-decoration: none;
   -webkit-transition: background-color 0.3s ease-out;
   transition: background-color 0.3s ease-out;
