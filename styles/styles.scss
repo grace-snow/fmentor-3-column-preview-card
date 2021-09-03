@@ -1,0 +1,88 @@
+@import 'reset';
+@import 'utilities';
+@import 'base';
+@import 'mq';
+
+/*---------------------------
+ ** Component Styles
+-----------------------------*/
+
+.c-showcase {
+  display: flex;
+  flex-direction: column;
+  max-width: rem(320px);
+  min-height: rem(420px);
+  overflow: hidden;
+  // flex-direction:;
+  border-radius: 0.9rem;
+  color: var(--white);
+
+  @include media--small-up {
+    flex-direction: row;
+    max-width: rem(800px);
+  }
+}
+
+.c-showcase__card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: rem(32px);
+  background-color: var(--accent-1);
+
+  &:nth-child(2) {
+    background-color: var(--accent-2);
+  }
+
+  &:nth-child(3) {
+    background-color: var(--accent-3);
+  }
+}
+
+.c-showcase__card-title {
+  margin-top: rem(16px);
+  color: var(--neutral);
+  font-family: var(--font-heading);
+  font-size: rem(36px);
+  text-transform: uppercase;
+}
+
+.c-showcase__card-text {
+  margin-top: rem(16px);
+  margin-bottom: auto;
+}
+
+.c-showcase__card-img {
+  height: rem(50px);
+  object-fit: contain;
+}
+
+.c-showcase__card-btn {
+  position: relative;
+  margin-top: rem(32px);
+  padding: 0.6em 1.2em;
+  background-color: var(--neutral);
+  border: rem(2px) solid transparent;
+  border-radius: rem(44px);
+  color: var(--black);
+  text-decoration: none;
+  transition: background-color 0.3s ease-out;
+
+  @include media--small-up {
+    margin-top: rem(62px);
+  }
+
+  mix-blend-mode: screen;
+
+  &:hover,
+  &:focus-visible {
+    background: transparent;
+    border-color: var(--neutral);
+    color: var(--neutral);
+  }
+
+  &:focus-visible {
+    outline: none;
+    text-decoration: underline;
+  }
+}

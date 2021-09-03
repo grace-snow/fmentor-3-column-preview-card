@@ -1,0 +1,31 @@
+/*---------------------------
+ ** Base
+-----------------------------*/
+body {
+  font-family: var(--font-body);
+  font-size: rem(15px);
+}
+
+main {
+  padding: rem(76px) rem(24px);
+}
+
+footer {
+  padding: rem(16px);
+  font-size: rem(14px);
+  text-align: center;
+
+  a {
+    color: var(--accent-2);
+    transition: all 0.3s ease-out;
+
+    &:hover {
+      filter: brightness(1.6);
+    }
+
+    &:focus-visible {
+      outline: rem(2px) solid var(--accent-1);
+      outline-offset: rem(4px);
+    }
+  }
+}
